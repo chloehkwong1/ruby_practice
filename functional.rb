@@ -52,3 +52,8 @@ def imperative_sum(numbers)
 end
 p imperative_sum(numbers)
 
+def functional_sum(numbers)
+    numbers.reduce {|total, n| total + n }
+end
+p functional_sum(numbers)
+
