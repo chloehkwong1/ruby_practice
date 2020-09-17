@@ -43,17 +43,41 @@ states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
 
 numbers = 1..10
 
-def imperative_sum(numbers)
-    total = 0
-    numbers.each do |n|
-        total += n
+# def imperative_sum(numbers)
+#     total = 0
+#     numbers.each do |n|
+#         total += n
+#     end
+#     total
+# end
+# p imperative_sum(numbers)
+
+# def functional_sum(numbers)
+#     numbers.reduce {|total, n| total + n }
+# end
+# p functional_sum(numbers)
+
+# def imperative_length(states)
+#     lengths = {}
+#     states.each do |state|
+#         lengths[state] = state.length
+#     end
+#     lengths
+# end
+
+# p imperative_length(states)
+
+# def functional_length(states)
+#     states.reduce({}) do |lengths, state|
+#         lengths[state] = state.length
+#         lengths
+#     end
+# end
+# p functional_length(states)
+
+def functional_multiply(numbers)
+    numbers.reduce do |total, n|
+        total * n
     end
-    total
 end
-p imperative_sum(numbers)
-
-def functional_sum(numbers)
-    numbers.reduce {|total, n| total + n }
-end
-p functional_sum(numbers)
-
+p functional_multiply(numbers)
