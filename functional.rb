@@ -67,17 +67,15 @@ numbers = 1..10
 
 # p imperative_length(states)
 
-# def functional_length(states)
-#     states.reduce({}) do |lengths, state|
-#         lengths[state] = state.length
-#         lengths
-#     end
-# end
-# p functional_length(states)
-
-def functional_multiply(numbers)
-    numbers.reduce do |total, n|
-        total * n
+def functional_length(states)
+    states.reduce({}) do |lengths, state| lengths[state] = state.length ;lengths
     end
 end
-p functional_multiply(numbers)
+p functional_length(states)
+
+# def functional_multiply(numbers)
+#     numbers.reduce do |total, n|
+#         total * n
+#     end
+# end
+# p functional_multiply(numbers)
